@@ -16,6 +16,8 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         bottomNavigationBar: BottomPanel(),
+
+        //sliver menu
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
