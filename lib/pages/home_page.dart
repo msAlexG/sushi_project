@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 16),
+              SizedBox(height: 18),
               HomeAdressPanel(), // панель с адресом доставки
               SizedBox(height: 16),
               PromoPanel(), // панель с промоакциями приложения
