@@ -6,6 +6,7 @@ class HomeAdressPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        width: double.infinity,
         color: Colors.yellow,
         height: 40,
         child: const Center(

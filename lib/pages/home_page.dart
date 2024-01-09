@@ -18,21 +18,36 @@ class HomePage extends StatelessWidget {
         bottomNavigationBar: BottomPanel(),
 
         //sliver menu
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 18),
-              HomeAdressPanel(), // панель с адресом доставки
-              SizedBox(height: 16),
-              PromoPanel(), // панель с промоакциями приложения
-              SizedBox(height: 20),
-              ShirtMenuPanel(), // панель с меню
-              SizedBox(height: 20),
-              CatalogPanel(), // панель с катологом товаров
-              SizedBox(height: 20),
-            ],
-          ),
+        body: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              title: HomeAdressPanel(),
+              toolbarHeight: 60,
+              pinned: true, // не убирать AppBar совсем при скролле
+              expandedHeight: 60, // на колько изначально ратягивается AppBar
+            ),
+
+            SliverAppBar(
+              title: PromoPanel(),
+
+              toolbarHeight: 160,
+              pinned: false, // не убирать AppBar совсем при скролле
+              expandedHeight: 160, // на колько изначально ратягивается AppBar
+            ),
+
+            SliverAppBar(
+              title: ShirtMenuPanel(),
+              toolbarHeight: 60,
+              pinned: true, // не убирать AppBar совсем при скролле
+              expandedHeight: 80, // на колько изначально ратягивается AppBar
+            ),
+            SliverToBoxAdapter(
+              child: CatalogPanel(),
+            )
+
+            // PromoPanel(), // панель с промоакциями приложения
+            // SizedBox(height: 20),
+          ],
         ),
       ),
     );

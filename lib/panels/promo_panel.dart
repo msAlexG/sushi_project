@@ -7,7 +7,7 @@ class PromoPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Colors.red,
-        height: 140,
+        height: 120,
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
