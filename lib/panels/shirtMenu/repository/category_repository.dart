@@ -18,6 +18,7 @@ class CategoryRepository {
       );
 
       List result = jsonDecode(response.body);
+
       categorys = [];
       for (int i = 0; i < result.length; i++) {
         CategoryModel category =
