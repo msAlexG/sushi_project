@@ -22,13 +22,10 @@ class ShirtMenuBloc extends Bloc<ShirtMenuEvent, ShirtMenuState> {
     emit(ShirtMenuLoading());
 
     try {
-      final categoryRepository = CategoryRepository();
-
-      final List<CategoryModel> category =
-          await categoryRepository.GetCategorys();
-
-      print(7);
-      emit(ShirtMenuLoaded(category: category));
+      final productRepository = CategoryRepository();
+      final List<CategoryModel> product =
+          await productRepository.GetCategorys();
+      emit(ShirtMenuLoaded(category: product));
     } catch (_) {
       emit(ShirtMenuError());
     }

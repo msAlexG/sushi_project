@@ -13,8 +13,7 @@ class CategoryRepository {
 
     try {
       var response = await client.get(
-        Uri.parse(
-            'http://localhost/sushi_server/api/objects/category/read.php'),
+        Uri.parse('http://10.0.2.2/sushi_server/api/objects/category/read.php'),
       );
 
       List result = jsonDecode(response.body);
