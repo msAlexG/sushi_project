@@ -4,7 +4,7 @@ import 'package:sushi_project/panels/bottom_panel.dart';
 import 'package:sushi_project/panels/catalog_panel.dart';
 import 'package:sushi_project/panels/home_adress_panel.dart';
 import 'package:sushi_project/panels/promo_panel.dart';
-import 'package:sushi_project/panels/shirt_menu_panel.dart';
+import 'package:sushi_project/panels/shirtMenu/shirt_menu_panel.dart';
 
 //отвечает за структуру главной страницы
 class HomePage extends StatelessWidget {
