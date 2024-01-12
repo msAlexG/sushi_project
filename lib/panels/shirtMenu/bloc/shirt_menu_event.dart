@@ -6,10 +6,12 @@ sealed class ShirtMenuEvent extends Equatable {
 }
 
 class ShirtMenuClicked extends ShirtMenuEvent {
-  const ShirtMenuClicked();
+  final int index;
+  final AutoScrollController autoScrollController;
+  const ShirtMenuClicked(this.index, this.autoScrollController);
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [index];
 }
 
 class ShirtMenuGet extends ShirtMenuEvent {

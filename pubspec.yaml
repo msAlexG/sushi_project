@@ -11,6 +11,8 @@ dependencies:
     sdk: flutter
   bloc:
   flutter_bloc:   
+  scrollable_positioned_list: ^0.3.8
+  scroll_to_index: ^3.0.1
   
 
 dev_dependencies:
