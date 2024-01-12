@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-//
+////
 class CatalogPanel extends StatelessWidget {
   final AutoScrollController autoScrollController;
   const CatalogPanel({super.key, required this.autoScrollController});
