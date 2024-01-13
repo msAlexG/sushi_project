@@ -23,6 +23,7 @@ class CatalogBloc extends Bloc<CatalogEvent, CatalogState> {
       emit(
         state.copyWith(categoryList: catalog),
       );
+      //
     } catch (_) {
       print('error');
     }
