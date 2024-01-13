@@ -1,0 +1,363 @@
+{
+   "category":[
+      {
+         "name":"set",
+         " id":"1",
+         "number":1,
+         "products":[
+            {
+               "name":"John",
+               "description":"1",
+               "img":"sales",
+               "price":"Jodfddhn",
+               "weight":"1",
+               "category_id":"dfdf",
+               "number":"sales",
+               "product_sous":[
+                  
+                  {
+                "id":"sales",
+                "name":"dfdfdf",
+                "description":"1"               
+               },
+
+
+               {
+                  "id":"dff",
+                  "name":"dfdfdvvfvfv",
+                  "description":"1"               
+                 }
+             ],
+
+             "flovour":[
+               {
+                "id":"dfedfefe",
+                "name":"dededed",
+                "description":"dededed",
+                "number":"feeeeded"             
+               },
+
+
+               {
+                  "id":"sasdssxsxles",
+                  "name":"fdfdfdf",
+                  "description":"1",
+                  "number":"safsdededsles"             
+                 }
+               
+             ],
+
+
+             "feature":[
+               {
+                "id":"sdsdsddsales",
+                "name":"dwfg",
+                "description":"1",
+                "number":"salfg fes"               
+               },
+
+
+               {
+                  "id":"sdcdcwdcales",
+                  "name":"fveeve",
+                  "description":"1",
+                  "number":"veevev"               
+                 }
+             ],
+
+             "size":[
+               
+               
+               {
+                "id":"dedee",
+                "name":"ynnnyt",
+                "description":"1",
+                "number":"dedev"               
+               },
+
+
+               {
+                  "id":"vevev",
+                  "name":"vededcwd",
+                  "description":"1",
+                  "number":"edveeve"               
+                 }
+
+
+               
+             ],
+
+             "addition":[
+               
+               {
+                "id":"feveveve",
+                "name":"Joevevhn",
+                "description":"1",
+                "number":"wcwcw"               
+               },
+
+
+               {
+                  "id":"vevrbrb",
+                  "name":"Jofvevevhn",
+                  "description":"1",
+                  "number":"saevevles"               
+                 }
+             ]
+            },
+            {
+               "name":"John",
+               "description":"1",
+               "img":"sales",
+               "price":"Jodfddhn",
+               "weight":"1",
+               "category_id":"dfdf",
+               "number":"sales",
+               "product_sous":[
+                  
+                  {
+                "id":"sales",
+                "name":"dfdfdf",
+                "description":"1"               
+               },
+
+
+               {
+                  "id":"dff",
+                  "name":"dfdfdvvfvfv",
+                  "description":"1"               
+                 }
+             ],
+
+             "flovour":[
+               {
+                "id":"dfedfefe",
+                "name":"dededed",
+                "description":"dededed",
+                "number":"feeeeded"             
+               },
+
+
+               {
+                  "id":"sasdssxsxles",
+                  "name":"fdfdfdf",
+                  "description":"1",
+                  "number":"safsdededsles"             
+                 }
+               
+             ],
+
+
+             "feature":[
+               {
+                "id":"sdsdsddsales",
+                "name":"dwfg",
+                "description":"1",
+                "number":"salfg fes"               
+               },
+
+
+               {
+                  "id":"sdcdcwdcales",
+                  "name":"fveeve",
+                  "description":"1",
+                  "number":"veevev"               
+                 }
+             ],
+
+             "size":[
+               
+               
+               {
+                "id":"dedee",
+                "name":"ynnnyt",
+                "description":"1",
+                "number":"dedev"               
+               },
+
+
+               {
+                  "id":"vevev",
+                  "name":"vededcwd",
+                  "description":"1",
+                  "number":"edveeve"               
+                 }
+
+
+               
+             ],
+
+             "addition":[
+               
+               {
+                "id":"feveveve",
+                "name":"Joevevhn",
+                "description":"1",
+                "number":"wcwcw"               
+               },
+
+
+               {
+                  "id":"vevrbrb",
+                  "name":"Jofvevevhn",
+                  "description":"1",
+                  "number":"saevevles"               
+                 }
+             ]
+            }
+   ]
+},
+{
+   "name":"set",
+   " id":"1",
+   "number":1,
+   "products":[
+      {
+         "name":"John",
+         "description":"1",
+         "img":"sales",
+         "price":"John",
+         "weight":"1",
+         "category_id":"sales",
+         "number":"sales",
+         "product_sous":[{
+          "id":"sales",
+          "name":"John",
+          "description":"1"               
+         },
+
+
+         {
+            "id":"sales",
+            "name":"John",
+            "description":"1"               
+           }
+       ],
+
+       "flovour":[{
+          "id":"sales",
+          "name":"John",
+          "description":"1",
+          "number":"sales"             
+         },
+
+
+         {
+            "id":"sales",
+            "name":"John",
+            "description":"1",
+            "number":"sales"             
+           }
+         
+       ],
+
+
+       "feature":[{
+          "id":"sales",
+          "name":"John",
+          "description":"1",
+          "number":"sales"               
+         },
+
+
+         {
+            "id":"sales",
+            "name":"John",
+            "description":"1",
+            "number":"sales"               
+           }
+       ],
+
+       "size":[{
+          "id":"sales",
+          "name":"John",
+          "description":"1",
+          "number":"sales"               
+         },
+
+
+         {
+            "id":"sales",
+            "name":"John",
+            "description":"1",
+            "number":"sales"               
+           }
+
+
+         
+       ],
+
+
+
+       "addition":[{
+          "id":"sales",
+          "name":"John",
+          "description":"1",
+          "number":"sales"               
+         },
+
+
+         {
+            "id":"sales",
+            "name":"John",
+            "description":"1",
+            "number":"sales"               
+           }
+       ]
+      },
+      {
+          "name":"John",
+          "description":"1",
+          "img":"sales",
+          "price":"John",
+          "weight":"1",
+          "category_id":"sales",
+          "number":"sales",
+          "product_sous":[{
+           "id":"sales",
+           "name":"John",
+           "description":"1"               
+          }
+        ],
+
+        "flovour":[{
+           "id":"sales",
+           "name":"John",
+           "description":"1",
+           "number":"sales"             
+          }
+        ],
+
+
+        "feature":[{
+           "id":"sales",
+           "name":"John",
+           "description":"1",
+           "number":"sales"               
+          }
+        ],
+
+        "size":[{
+           "id":"sales",
+           "name":"John",
+           "description":"1",
+           "number":"sales"               
+          }
+        ],
+
+
+
+        "addition":[{
+           "id":"sales",
+           "name":"John",
+           "description":"1",
+           "number":"sales"               
+          }
+        ]
+       }
+     
+]
+}
+]
+}
+
