@@ -6,7 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 import 'package:sushi_project/panels/bottom_panel.dart';
-import 'package:sushi_project/panels/catalog_panel.dart';
+import 'package:sushi_project/panels/catalog/bloc/catalog_bloc.dart';
+import 'package:sushi_project/panels/catalog/catalog_panel.dart';
 import 'package:sushi_project/panels/home_adress_panel.dart';
 import 'package:sushi_project/panels/promo_panel.dart';
 import 'package:sushi_project/panels/shirtMenu/bloc/shirt_menu_bloc.dart';
@@ -23,6 +24,9 @@ class HomePage extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => ShirtMenuBloc(),
+        ),
+        BlocProvider(
+          create: (context) => CatalogBloc(),
         ),
       ],
       child: const SafeArea(
@@ -51,7 +55,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
   @override
   void initState() {
-    context.read<ShirtMenuBloc>().add(ShirtMenuGet());
+    context.read<ShirtMenuBloc>().add(const ShirtMenuGet());
+    context.read<CatalogBloc>().add(const CatalogGet());
 
     super.initState();
   }

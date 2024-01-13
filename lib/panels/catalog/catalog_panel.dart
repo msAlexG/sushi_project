@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:scroll_to_index/scroll_to_index.dart';
+import 'package:sushi_project/panels/catalog/bloc/catalog_bloc.dart';
+import 'package:sushi_project/panels/shirtMenu/model/category.dart';
 
 ////
 class CatalogPanel extends StatelessWidget {
@@ -11,37 +14,24 @@ class CatalogPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverList(
-        delegate: SliverChildListDelegate([
-      WrapScrollTag(
-          autoScrollController: autoScrollController,
-          index: 0,
-          child: Container(
-            height: 600,
-            color: Colors.red,
-          )),
-      WrapScrollTag(
-          autoScrollController: autoScrollController,
-          index: 1,
-          child: Container(
-            height: 800,
-            color: Colors.yellow,
-          )),
-      WrapScrollTag(
-          autoScrollController: autoScrollController,
-          index: 2,
-          child: Container(
-            height: 800,
-            color: Colors.green,
-          )),
-      WrapScrollTag(
-          autoScrollController: autoScrollController,
-          index: 3,
-          child: Container(
-            height: 300,
-            color: Colors.blue,
-          )),
-    ]));
+    return BlocBuilder<CatalogBloc, CatalogState>(
+      builder: (context, state) {
+        List<CategoryModel> catalog = state.categoryList;
+        return SliverList.builder(
+          itemCount: catalog.length,
+          itemBuilder: (BuildContext context, int index) {
+            return WrapScrollTag(
+                autoScrollController: autoScrollController,
+                index: index,
+                child: Container(
+                  height: 800,
+                  color: Colors.green,
+                  child: Text(catalog[index].name),
+                ));
+          },
+        );
+      },
+    );
   }
 }
 
