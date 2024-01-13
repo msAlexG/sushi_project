@@ -8,7 +8,7 @@ import 'package:sushi_project/panels/shirtMenu/repository/category_repository.da
 
 part 'catalog_event.dart';
 part 'catalog_state.dart';
-
+//
 class CatalogBloc extends Bloc<CatalogEvent, CatalogState> {
   CatalogBloc() : super(CatalogState.initial()) {
     on<CatalogGet>(_catalogGet);
