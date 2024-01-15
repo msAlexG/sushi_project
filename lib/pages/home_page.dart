@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
 import 'package:sushi_project/panels/bottom_panel.dart';
-import 'package:sushi_project/panels/catalog/bloc/catalog_bloc.dart';
+import 'package:sushi_project/bloc/catalogBloc/catalog_bloc.dart';
 import 'package:sushi_project/panels/catalog/catalog_panel.dart';
 import 'package:sushi_project/panels/home_adress_panel.dart';
 import 'package:sushi_project/panels/promo_panel.dart';
@@ -77,7 +77,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         SliverAppBar(
             // сливер аппбар ввиде меню
             title: ShirtMenuPanel(autoScrollController: _autoScrollController),
-            toolbarHeight: 60,
+            toolbarHeight: 80,
             pinned: true, // не убирать AppBar совсем при скролле
             expandedHeight: 80 // на колько изначально ратягивается AppBar
             ),

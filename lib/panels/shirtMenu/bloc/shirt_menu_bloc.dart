@@ -17,13 +17,15 @@ class ShirtMenuBloc extends Bloc<ShirtMenuEvent, ShirtMenuState> {
 
   FutureOr<void> _shirtMenuClicked(
       ShirtMenuClicked event, Emitter<ShirtMenuState> emit) async {
-    final _autoScrollController = event.autoScrollController;
+    final _autoScrollControllerNew = event.autoScrollController;
 
     final index = event.index;
 
-    await _autoScrollController.scrollToIndex(index,
-        duration: const Duration(seconds: 1),
-        preferPosition: AutoScrollPosition.begin);
+    await _autoScrollControllerNew.scrollToIndex(
+      index,
+      duration: const Duration(seconds: 1),
+      preferPosition: AutoScrollPosition.begin,
+    );
   }
 
   FutureOr<void> _shirtMenuGet(
