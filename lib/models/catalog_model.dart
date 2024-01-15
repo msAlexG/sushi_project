@@ -4,18 +4,19 @@
 
 import 'dart:convert';
 
-Catalog catalogFromJson(String str) => Catalog.fromJson(json.decode(str));
+CatalogModel catalogFromJson(String str) =>
+    CatalogModel.fromJson(json.decode(str));
 
-String catalogToJson(Catalog data) => json.encode(data.toJson());
+String catalogToJson(CatalogModel data) => json.encode(data.toJson());
 
-class Catalog {
+class CatalogModel {
   List<Category> category;
 
-  Catalog({
+  CatalogModel({
     required this.category,
   });
 
-  factory Catalog.fromJson(Map<String, dynamic> json) => Catalog(
+  factory CatalogModel.fromJson(Map<String, dynamic> json) => CatalogModel(
         category: List<Category>.from(
             json["category"].map((x) => Category.fromJson(x))),
       );
@@ -52,6 +53,11 @@ class Category {
         "number": number,
         "products": List<dynamic>.from(products.map((x) => x.toJson())),
       };
+
+  @override
+  String toString() {
+    return 'Category(name: $name, id: $id, number: $number, products: $products)';
+  }
 }
 
 class Product {
@@ -117,6 +123,11 @@ class Product {
         "size": List<dynamic>.from(size.map((x) => x.toJson())),
         "addition": List<dynamic>.from(addition.map((x) => x.toJson())),
       };
+
+  @override
+  String toString() {
+    return 'Product(name: $name, description: $description, img: $img, price: $price, weight: $weight, categoryId: $categoryId, number: $number, productSous: $productSous, flovour: $flovour, feature: $feature, size: $size, addition: $addition)';
+  }
 }
 
 class Addition {
