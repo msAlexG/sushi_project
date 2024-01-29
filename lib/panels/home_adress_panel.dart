@@ -9,6 +9,9 @@ class HomeAdressPanel extends StatelessWidget {
       toolbarHeight: 60,
       pinned: true, //закрепить Adress panel при прокрутке
       expandedHeight: 60,
+      surfaceTintColor: Colors.transparent,
+      shadowColor: Colors.transparent,
+      backgroundColor: Colors.white,
       title: Container(
           width: double.infinity,
           color: Colors.yellow,

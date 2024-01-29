@@ -54,10 +54,10 @@ class Category {
         "products": List<dynamic>.from(products.map((x) => x.toJson())),
       };
 
-  @override
-  String toString() {
-    return 'Category(name: $name, id: $id, number: $number, products: $products)';
-  }
+  // @override
+  // String toString() {
+  //   return 'Category(name: $name, id: $id, number: $number, products: $products)';
+  // }
 }
 
 class Product {
@@ -124,10 +124,10 @@ class Product {
         "addition": List<dynamic>.from(addition.map((x) => x.toJson())),
       };
 
-  @override
-  String toString() {
-    return 'Product(name: $name, description: $description, img: $img, price: $price, weight: $weight, categoryId: $categoryId, number: $number, productSous: $productSous, flovour: $flovour, feature: $feature, size: $size, addition: $addition)';
-  }
+  // @override
+  // String toString() {
+  //   return 'Product(name: $name, description: $description, img: $img, price: $price, weight: $weight, categoryId: $categoryId, number: $number, productSous: $productSous, flovour: $flovour, feature: $feature, size: $size, addition: $addition)';
+  // }
 }
 
 class Addition {

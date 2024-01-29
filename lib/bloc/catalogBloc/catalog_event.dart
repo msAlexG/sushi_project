@@ -13,10 +13,25 @@ class CatalogGet extends CatalogEvent {
 }
 
 class ShirtMenuClicked extends CatalogEvent {
-  final int index;
-  final AutoScrollController autoScrollController;
-  const ShirtMenuClicked(this.index, this.autoScrollController);
+  final int menuIndex;
+  final GlobalKey key;
+  final AutoScrollController menuControler;
+  final AutoScrollController catalogControler;
+  final bool menuClickedState;
+  const ShirtMenuClicked(
+      {required this.catalogControler,
+      required this.menuControler,
+      required this.menuIndex,
+      required this.key,
+      required this.menuClickedState});
 
   @override
-  List<Object?> get props => [index];
+  List<Object?> get props => [menuIndex, key, menuControler, menuClickedState];
+}
+
+class MenuToggleClicked extends CatalogEvent {
+  const MenuToggleClicked();
+
+  @override
+  List<Object?> get props => [];
 }

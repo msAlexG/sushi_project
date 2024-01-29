@@ -1,17 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:inview_notifier_list/inview_notifier_list.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-
 import 'package:sushi_project/panels/bottom_panel.dart';
 import 'package:sushi_project/bloc/catalogBloc/catalog_bloc.dart';
 import 'package:sushi_project/panels/catalog_panel.dart';
 import 'package:sushi_project/panels/home_adress_panel.dart';
 import 'package:sushi_project/panels/promo_panel.dart';
 
-import 'package:sushi_project/panels/shirtMenu/shirt_menu_panel.dart';
+import 'package:sushi_project/panels/shirt_menu_panel.dart';
 
 //отвечает за структуру главной страницы
 class HomePage extends StatelessWidget {
@@ -29,8 +28,7 @@ class HomePage extends StatelessWidget {
         child: Scaffold(
             backgroundColor: Colors.white,
             bottomNavigationBar: BottomPanel(),
-            // ignore: unnecessary_const
-            body: const HomePageWidget()),
+            body: HomePageWidget()),
       ),
     );
   }
@@ -46,8 +44,8 @@ class HomePageWidget extends StatefulWidget {
 }
 
 class _HomePageWidgetState extends State<HomePageWidget> {
-  AutoScrollController _autoScrollController = AutoScrollController();
-  final scrollDirection = Axis.vertical;
+  AutoScrollController catalogAutoScrollController = AutoScrollController();
+  AutoScrollController menuAutoScrollController = AutoScrollController();
 
   @override
   void initState() {
@@ -58,27 +56,41 @@ class _HomePageWidgetState extends State<HomePageWidget> {
 
   @override
   void dispose() {
-    _autoScrollController.dispose();
+    catalogAutoScrollController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      controller: _autoScrollController,
+    //InViewNotifierCustomScrollView обертка над CustomScrollView
+    return InViewNotifierCustomScrollView(
+      //   physics: ScrollPhysics(),
+      shrinkWrap: true,
+      //параметр isInViewPortCondition отвечает за то в каком месте отлавливать виджет который скролится (умножить на 0,01 отлавливать
+      // в верху экрана если ужножить на 0,05 то посередине экрана )
+      isInViewPortCondition:
+          (double deltaTop, double deltaBottom, double vpHeight) {
+        return deltaTop + 240 < (0.1 * (vpHeight)) &&
+            deltaBottom + 240 > (0.1 * (vpHeight));
+      },
+      scrollDirection: Axis.vertical,
+      controller: catalogAutoScrollController,
       slivers: [
-        const HomeAdressPanel(), // сливер аппбар ввиде панели с адресом клиента
-        const PromoPanel(), // сливер аппбар ввиде панели с промо акциями
-        SliverAppBar(
-            // сливер аппбар ввиде меню
-            title: ShirtMenuPanel(autoScrollController: _autoScrollController),
-            toolbarHeight: 80,
-            pinned: true, // не убирать AppBar совсем при скролле
-            expandedHeight: 80 // на колько изначально ратягивается AppBar
-            ),
+        // сливер аппбар ввиде панели с адресом клиента
+        const HomeAdressPanel(),
+        // сливер аппбар ввиде панели с промо акциями
+        const PromoPanel(),
+
+        // сливер аппбар ввиде меню
+        ShirtMenuPanel(
+          catalogAutoScrollController: catalogAutoScrollController,
+          menuAutoScrollController: menuAutoScrollController,
+        ),
+        // сливер лист в виде каталога меню
         CatalogPanel(
-            autoScrollController:
-                _autoScrollController), // сливер лист в виде каталога меню
+          catalogController: catalogAutoScrollController,
+          menuController: menuAutoScrollController,
+        ),
       ],
     );
   }

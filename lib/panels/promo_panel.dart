@@ -9,9 +9,12 @@ class PromoPanel extends StatelessWidget {
       toolbarHeight: 160,
       pinned: false, // не убирать AppBar совсем при скролле
       expandedHeight: 160, // на колько изначально ратягивается AppBar
+      surfaceTintColor: Colors.transparent,
+      shadowColor: Colors.transparent,
+      backgroundColor: Colors.white,
       title: Container(
           color: Colors.red,
-          height: 120,
+          height: 140,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
